@@ -1,7 +1,7 @@
 {
 	"title": "Playgrounds by Istituto Sacro Cuore",
 	"publisherName": "Domenico Caggiano",
-	"feedIdentifier" : "io.github.dcswiftdeveloper",
+	"feedIdentifier" : "io.github.istitutosacrocuore",
 	"contactURL" : "mailto:domenico.caggiano@gmail.com",
 	"formatVersion": "1.1",
 	"documents": [
