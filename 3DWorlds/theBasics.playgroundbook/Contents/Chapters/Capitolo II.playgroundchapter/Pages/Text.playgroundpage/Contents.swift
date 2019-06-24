@@ -1,0 +1,14 @@
+//#-code-completion(identifier, hide, setupLiveView())
+//#-hidden-code
+import Foundation
+//#-end-hidden-code
+//#-editable-code Tap to enter code
+show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+//show(<#T##image: UIImage##UIImage#>)
+
+//#-end-editable-code
