@@ -72,40 +72,6 @@
 			}
 		],
 		"previewImageURLs" : ["https://dcswiftdeveloper.github.io/quizBot/quizBot.png","https://dcswiftdeveloper.github.io/quizBot/quizBot.png","https://dcswiftdeveloper.github.io/quizBot/quizBot.png"]
-	},
-		{
-		"title" : "UiKit",
-		"overviewSubtitle" : "Domenico Caggiano",
-		"detailSubtitle": "UiKot",
-		"description": "Ukit",
-		"difficultyLevel": "beginner",
-		"contentIdentifier": "io.github.dcswiftdeveloper.temp",
-		"contentVersion": "1.0.3",
-		"url": "https://dcswiftdeveloper.github.io/UiKit/temp.playgroundbook.zip",
-		"publishedDate": "2018-07-09T09:00:00+07:00",
-		"lastUpdatedDate" : "2018-07-10T12:00:00+07:00",
-		"thumbnailURL": "https://dcswiftdeveloper.github.io/UiKit/UiKit.png",
-		"bannerImageURL" : "https://dcswiftdeveloper.github.io/UiKit/UiKit.png",
-		"additionalInformation" : [
-			{
-			"name": "Autore:",
-			"value": "Domenico Caggiano"
-			},
-			{
-			"name": "Versione:",
-			"value": "1.1"
-			},
-			{
-			"type": "date",
-			"name": "Data di uscita:",
-			"value": "2019-04-19T12:00:00+00:00"
-			},
-			{
-			"name": "Languages:",
-			"value": "Italiano"
-			}
-		],
-		"previewImageURLs" : ["https://dcswiftdeveloper.github.io/UiKit/UiKit.png","https://dcswiftdeveloper.github.io/UiKit/UiKit.png","https://dcswiftdeveloper.github.io/UiKit/UiKit.png"]
 	}
 ]
 }
