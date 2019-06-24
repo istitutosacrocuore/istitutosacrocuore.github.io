@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>reimbussolamento</key>
+		<dict>
+			<key>Definition</key>
+			<string>Dopo l&apos;estrazione reinserire la pallina estratta nella stessa urna</string>
+			<key>Title</key>
+			<string>reimbussolamento</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

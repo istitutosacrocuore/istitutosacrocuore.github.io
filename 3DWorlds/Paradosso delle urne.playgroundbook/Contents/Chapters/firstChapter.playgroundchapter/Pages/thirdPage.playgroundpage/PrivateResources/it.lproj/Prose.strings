@@ -1,0 +1,22 @@
+"FirstProseBlock" = "Abbiamo calcolato la probabilità di estrarre, con reimbussolamento, due palline bianche sia procedendo con la strategia 1 che con la strategia 2, illustrate nella prima pagina, in un caso particolare e la strategia migliore sembra essere la seconda cioè quella che sceglie una volta per tutte l'urna ed estrae con reimbussolamento due palline dalla stessa urna.
+
+----------------------------------------------------------
+
+Modifica ora il codice già scritto nella pagina precedente per ripetere l'esperimento con composizioni diverse delle urne. Varia il numero di palline bianche e nere e, successivamente, calcola quale delle due strategie risulta essere la migliore.
+
+-----------------------------------------------------------
+
+
+Puoi copiare e incollare il codice già scritto nella pagina precedente e modificarlo in modo da:
+- ripetere l'esperimento  con un numero di palline scelte da te e quindi dovrai inizializzare manualmente le variabili ogni volta;
+- ripetere l'esperimento  con un numero di palline casuali generato dal sistema e quindi dovrai inizializzare  le variabili con l'istruzione nomeVariabile = Double(random.nextInt()) ;
+
+";
+
+"SecondProseBlock" = "Dovresti aver notato che la strategia vincente è SEMPRE la seconda indipendentemente dal numero di palline.
+--------------------------------------------------------------
+
+E' strano e non esiste una giustificazione a tale comportamento, per questo si chiama PARADOSSO.
+
+Vediamo di dimostrare che questo comportamento si verifica in ogni situazione. Vai alla pagina successiva.
+";

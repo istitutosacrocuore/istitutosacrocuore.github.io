@@ -1,0 +1,16 @@
+"FirstProseBlock" = "Indichiamo con b' e n' le palline bianche e nere della prima urna, con b'' e n'' le palline bianche e nere della seconda urna.
+La probabilità di estrarre una pallina bianca dalla prima urna sarà α = b'/(b'+n')
+La probabilità di estrarre una pallina bianca dalla seconda urna sarà β = b''/(b''+n'')
+
+Possiamo così ricavare la probabilità di estrarre due palline bianche con la prima e con la secoda strategia che indichiamo rispettivamnente con P' e P''.
+
+Per stabilire quale sia maggiore studiamo la differenza.
+![formula](IMG_0740.png)
+
+Appare chiaro che tale differenza è sempre maggiore o uguale di zero!!!
+
+Quindi abbiamo dimostrato una cosa a prima vista curiosa, cioè che la risposta NON dipende dall'assegnazione dei numeri b', b''.
+
+**Questo ci conferma che prima di prendere una decisione è opportuno riflettere e calcolare la probabilità degli eventi in gioco, senza lasciarci influenzare da prime impressioni, non sempre corrette.**";
+
+"SecondProseBlock" = " ";
