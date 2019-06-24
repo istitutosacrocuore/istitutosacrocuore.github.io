@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>let coords = world.coordinates(inColumns: [7, 8, 9], intersectingRows: [7, 8, 9])
+for coor in coords {
+    for i in 1...3 {
+        world.place(Block(), at: coor)
+    }
+}
+
+world.place(Block(), at: Coordinate(column: 9, row: 9))
+world.place(Stair(), at: Coordinate(column: 9, row: 8))
+world.place(Gem(), at: Coordinate(column: 9, row: 9))
+
+let portal = Portal(color: #colorLiteral(red: 0.4028071761, green: 0.7315050364, blue: 0.2071235478, alpha: 1))
+world.place(portal, atStartColumn: 1, startRow: 1, atEndColumn: 7, endRow: 9)
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 531}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 3))
+
+hopper.move(distance: 4)
+hopper.collectGem()
+hopper.turnLeft()
+hopper.move(distance: 2)
+hopper.turnLeft()
+hopper.move(distance: 2)
+hopper.collectGem()
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{3114, 208}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

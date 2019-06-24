@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Di Dean Domi
+//un livello in cui i personaggi accettano di compiere una missione, ovvero raccogliere le gemme in cima alle torri, alla fine si riuniscono, ma poi avviene qualcosa di inaspettato
+for colonne in 0 ... 4 {
+    for righe in -5 ... -2 {
+        world.place(Block(), at:
+            Coordinate(column: colonne, row: righe))
+    }
+}
+for colonne in 8 ... 11 {
+    for righe in 13 ... 15 {
+        world.place(Block(), at: Coordinate(column: colonne, row: righe))
+    }
+}
+// spazio variabili, costanti e funzioni
+let allCoordinates = world.allPossibleCoordinates
+let expert1 = Expert()
+let expert2 = Expert()
+let blu = Character(name: .blu)
+let byte = Character(name: .byte)
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 685}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>func move1(distance: Int) {
+    for i in 1 ... distance {
+        blu.jump()
+    }
+}
+func move2(distance: Int) {
+    for i in 1 ... distance {
+        hopper.jump()
+    }
+}
+func move3(distance: Int) {
+    for i in 1 ... distance {
+        byte.jump()
+    }
+}
+var columns = world.coordinates(inColumns: [4,5,6,7])
+var rows = world.coordinates(inRows: [4,5,6,7])
+for allCoordinates in rows {
+    world.removeBlock(at: allCoordinates)
+    world.placeWater(at: [allCoordinates])
+}
+for allCoordinates in columns {
+    world.removeBlock(at: allCoordinates)
+    world.placeWater(at: [allCoordinates])
+}
+//costruzione delle torri con array e cicli for
+let coords = world.coordinates(inColumns: [11, 10, 9], intersectingRows: [11, 10
+    , 9])
+for coor in coords {
+    for i in 1...6 {
+        world.place(Block(), at: coor)
+    }
+}
+let coordi = world.coordinates(inColumns: [11, 10, 9], intersectingRows: [2, 1, 0])
+for coordi in coordi {
+    for i in 1...6 {
+        world.place(Block(), at: coordi)
+    }
+}
+let curti = world.coordinates(inColumns: [0, 1, 2], intersectingRows: [0, 1, 2])
+for curti in curti {
+    for i in 1...6 {
+        world.place(Block(), at: curti)
+        
+    }
+}
+
+let curtis = world.coordinates(inColumns: [0, 1, 2], intersectingRows: [9, 10, 11])
+for curtis in curtis {
+    for i in 1...6 {
+        world.place(Block(), at: curtis)
+    }
+}
+
+world.place(Block(), at: Coordinate(column: 8, row: 10))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 8, row: 9))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 8, row: 8))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 9, row: 8))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 10, row: 8))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 11, row: 8))
+}
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 3, row: 2))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 3, row: 3))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 2, row: 3))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 1, row: 3))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 0, row: 3))
+}
+world.place(Block(), at: Coordinate(column: 3, row: 10))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 3, row: 9))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 3, row: 8))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 2, row: 8))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 1, row: 8))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 0, row: 8))
+}
+world.place(Block(), at: Coordinate(column: 8, row: 1))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 8, row: 2))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 8, row: 3))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 9, row: 3))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 10, row: 3))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 11, row: 3))
+}
+world.place(Block(), at: Coordinate(column: 11, row: 2))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 11, row: 1))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 11, row: 0))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 10, row: 0))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 9, row: 0))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 9, row: 1
+    ))
+}
+for i in 1 ... 7 {
+    world.place(Block(), at: Coordinate(column: 9, row: 2))
+}
+for i in 1 ... 8 {
+    world.place(Block(), at: Coordinate(column: 10, row: 2))
+}
+for i in 1 ... 9 {
+    world.place(Block(), at: Coordinate(column: 10, row: 1))
+}
+world.place(Block(), at: Coordinate(column: 0, row: 9))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 0, row: 10))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 0, row: 11))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 1, row: 11))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 2, row: 11))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 2, row: 10
+    ))
+}
+for i in 1 ... 7 {
+    world.place(Block(), at: Coordinate(column: 2, row: 9))
+}
+for i in 1 ... 8 {
+    world.place(Block(), at: Coordinate(column: 1, row: 9))
+}
+for i in 1 ... 9 {
+    world.place(Block(), at: Coordinate(column: 1, row: 10))
+}
+world.place(Block(), at: Coordinate(column: 11, row: 9))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 11, row: 10))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 11, row: 11))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 10, row: 11))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 9, row: 11))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 9, row: 10
+    ))
+}
+for i in 1 ... 7 {
+    world.place(Block(), at: Coordinate(column: 9, row: 9))
+}
+for i in 1 ... 8 {
+    world.place(Block(), at: Coordinate(column: 10, row: 9))
+}
+for i in 1 ... 9 {
+    world.place(Block(), at: Coordinate(column: 10, row: 10))
+}
+world.place(Block(), at: Coordinate(column: 0, row: 2))
+for i in 1 ... 2 {
+    world.place(Block(), at: Coordinate(column: 0, row: 1))
+}
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 0, row: 0))
+}
+for i in 1 ... 4 {
+    world.place(Block(), at: Coordinate(column: 1, row: 0))
+}
+for i in 1 ... 5 {
+    world.place(Block(), at: Coordinate(column: 2, row: 0))
+}
+for i in 1 ... 6 {
+    world.place(Block(), at: Coordinate(column: 2, row: 1
+    ))
+}
+for i in 1 ... 7 {
+    world.place(Block(), at: Coordinate(column: 2, row: 2))
+}
+for i in 1 ... 8 {
+    world.place(Block(), at: Coordinate(column: 1, row: 2))
+}
+for i in 1 ... 9 {
+    world.place(Block(), at: Coordinate(column: 1, row: 1))
+}
+//inserimento delle genme sulla cima delle torri
+world.placeGems(at: [Coordinate(column: 1, row: 1)])
+world.placeGems(at: [Coordinate(column: 10, row: 1)])
+world.placeGems(at: [Coordinate(column: 10, row: 10)])
+world.placeGems(at: [Coordinate(column: 1, row: 10)])
+// inserimento dei personaggi
+world.place(expert1, facing: north, at: Coordinate(column: 3, row: 0))
+world.place(byte, facing: north, at: Coordinate(column: 8, row: 0))
+world.place(blu, facing: south, at: Coordinate(column: 3, row: 11))
+world.place(hopper, facing: south, at: Coordinate(column: 8, row: 11))
+// svolgimento della missione, i personaggi saltano fino in cima alla torre, ed expert usa una piattaforma, che, facendo salire un suo clone fino in cima, raccoglie la gemma
+for i in 1 ... 3 {
+    move1(distance: 3)
+    blu.turnRight()
+}
+for i in 1 ... 2 {
+    move1(distance: 2)
+    blu.turnRight()
+}
+blu.jump()
+blu.turnRight()
+blu.jump()
+blu.collectGem()
+blu.danceLikeNoOneIsWatching()
+
+for i in 1 ... 3 {
+    move2(distance: 3)
+    hopper.turnLeft()
+    
+}
+for i in 1 ... 2 {
+    move2(distance: 2)
+    hopper.turnLeft()
+    
+}
+hopper.jump()
+hopper.turnLeft()
+hopper.jump()
+hopper.collectGem()
+hopper.danceLikeNoOneIsWatching()
+
+for i in 1 ... 3 {
+    move3(distance: 3)
+    byte.turnRight()
+}
+for i in 1 ... 2 {
+    move3(distance: 2)
+    byte.turnRight()
+}
+byte.jump()
+byte.turnRight()
+byte.jump()
+byte.collectGem()
+byte.danceLikeNoOneIsWatching()
+
+expert1.grumbleGrumble()
+let platformlockblack = PlatformLock(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0))
+world.place(platformlockblack, facing: south, at: Coordinate(column: 3, row: 1))
+
+world.place(Platform(onLevel: 2, controlledBy: platformlockblack), at: Coordinate(column: 4, row: 1))
+world.place(expert2, facing: west, at: Coordinate(column: 4, row: 1))
+
+for i in 1 ... 15 {
+    expert1.turnLockUp()
+}
+expert1.argh()
+
+for i in 1 ... 15 {
+    world.place(Block(), at: Coordinate(column: 3, row: 1))
+}
+expert1.argh()
+
+for i in 1 ... 3 {
+    world.place(Block(), at: Coordinate(column: 2, row: 1))
+}
+world.removeItems(at: Coordinate(column: 3, row: 1))
+world.removeItems(at: Coordinate(column: 3, row: 0))
+for i in 1 ... 3 {
+    expert2.moveForward()
+}
+expert2.collectGem()
+expert2.danceLikeNoOneIsWatching()
+// al completamento del livello, i quattro personaggi si riuniscono e ballano
+world.place(Platform(), at: Coordinate(column: 4, row: 4))
+world.place(Platform(), at: Coordinate(column: 7, row: 4))
+world.place(Platform(), at: Coordinate(column: 7, row: 7))
+world.place(Platform(), at: Coordinate(column: 4, row: 7))
+world.place(hopper, facing: south, at: Coordinate(column: 7, row: 7))
+world.place(blu, facing: south, at: Coordinate(column: 4, row: 7))
+world.place(expert2, facing: north, at: Coordinate(column: 4, row: 4))
+world.place(byte, facing: north, at: Coordinate(column: 7, row: 4))
+hopper.danceLikeNoOneIsWatching()
+expert2.danceLikeNoOneIsWatching()
+byte.danceLikeNoOneIsWatching()
+// blu, però, sbatte il piede a terra e causa la rimozione di tutti i blocchi, dei personaggi e dell'acqua
+blu.argh()
+for i in 1 ... 17 {
+    for coordinate in allCoordinates {
+        world.removeBlock(at: coordinate)
+    }
+}
+for i in 1 ... 2 {
+    for coordinate in allCoordinates {
+        world.removeItems(at: coordinate)
+    }
+}
+// dopodichè si ricrea la mappa e si crea un panorama.
+for coordinate in allCoordinates {
+    world.place(Block(), at: coordinate)
+}
+
+var heights: [Int] = [3,8,2,1,7,5,4,6,10,9]
+
+var index = 0
+for coordinate in allCoordinates {
+    if index == heights.count {
+        index = 0
+    }
+    for i in 0...heights[index] {
+        world.place(Block(), at: coordinate)
+    }
+    index += 1
+}
+//blu ha riportato l'equilibrio nel mondo
+// fine
+</string>
+			<key>ModifiedRange</key>
+			<string>{3268, 9738}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

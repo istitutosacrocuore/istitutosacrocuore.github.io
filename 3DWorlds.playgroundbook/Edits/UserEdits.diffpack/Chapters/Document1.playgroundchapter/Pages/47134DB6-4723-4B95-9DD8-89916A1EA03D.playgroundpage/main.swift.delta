@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//.MARCO LI
+//. In questo livello dovete prendere tutte le gemme e finito di raccogliere le gemme dovete ritornare 
+
+var sea : [Coordinate] = []
+sea.append(Coordinate(column: 6, row: 5))
+sea.append(Coordinate(column: 5, row: 5))
+sea.append(Coordinate(column: 6, row: 6))
+sea.append(Coordinate(column: 5, row: 6))
+sea.append(Coordinate(column: 6, row: 7))
+sea.append(Coordinate(column: 5, row: 7))
+sea.append(Coordinate(column: 4, row: 6))
+sea.append(Coordinate(column: 4, row: 5))
+sea.append(Coordinate(column: 5, row: 4))
+sea.append(Coordinate(column: 6, row: 4))
+sea.append(Coordinate(column: 7, row: 5))
+sea.append(Coordinate(column: 7, row: 6))
+sea.append(Coordinate(column: 6, row: 9))
+sea.append(Coordinate(column: 5, row: 9))
+sea.append(Coordinate(column: 2, row: 6))
+sea.append(Coordinate(column: 2, row: 5))
+sea.append(Coordinate(column: 5, row: 2))
+sea.append(Coordinate(column: 6, row: 2))
+sea.append(Coordinate(column: 9, row: 5))
+sea.append(Coordinate(column: 9, row: 6))
+
+for coordinate in sea{
+    world.removeBlock(atColumn: 6, row: 5)
+    
+    world.place(Water(), at: coordinate)
+    world.removeBlock(atColumn: 5, row:5 )
+    
+    world.place(Water(), at: coordinate)
+    world.removeBlock(atColumn: 6, row: 6)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 5, row: 6)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 6, row: 7)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 5, row: 7)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 4, row: 6)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 4, row: 5)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 5, row: 4)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 6, row: 4)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 7, row: 5)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 7, row: 6)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 6, row: 9)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 5, row: 9)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 2, row: 6)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 2, row: 5)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 5, row: 2)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 6, row: 2)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 9, row: 5)
+    
+    world.place(Water(), at:coordinate)
+    world.removeBlock(atColumn: 9, row: 6)
+}
+
+
+let corners = [
+    Coordinate(column: 7, row: 4),
+    Coordinate(column: 8, row: 3),
+    Coordinate(column: 9, row: 2),
+    Coordinate(column: 10, row: 1),
+    Coordinate(column: 11, row: 0),
+    Coordinate(column: 7, row: 7),
+    Coordinate(column: 8, row: 8),
+    Coordinate(column: 9, row: 9),
+    Coordinate(column: 10, row: 10),
+    Coordinate(column: 11, row: 11),
+    Coordinate(column: 4, row: 7),
+    Coordinate(column: 3, row: 8),
+    Coordinate(column: 2, row: 9),
+    Coordinate(column: 1, row: 10),
+    Coordinate(column: 0, row: 11),
+    Coordinate(column: 4, row: 4),
+    Coordinate(column: 3, row: 3),
+    Coordinate(column: 2, row: 2),
+    Coordinate(column: 1, row: 1),
+    Coordinate(column: 0, row: 0),
+    
+]
+
+for coordinate in corners {
+    for i in 1 ... 4 {
+        world.place(Block(), at: coordinate)
+    }
+}
+
+for colonne in 7 ... 11 {
+    for righe in -5 ... -2 {
+        world.place(Block(), at: Coordinate(column: colonne, row: righe))
+    }
+}
+
+for colonne in 1 ... 4 {
+    for righe in 13 ... 15 {
+        world.place(Block(), at: Coordinate(column: colonne, row: righe))
+    }
+}
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 3842}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 4, row: 15))
+
+world.place(Portal(color: #colorLiteral(red: 0.9372549057006836, green: 0.3490196168422699, blue: 0.1921568661928177, alpha: 1.0)),
+            atStartColumn: 1, startRow:13, 
+            atEndColumn: 1, endRow: 13
+    
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.9372549057006836, green: 0.3490196168422699, blue: 0.1921568661928177, alpha: 1.0)),
+            atStartColumn: 0, startRow:1, 
+            atEndColumn: 0, endRow: 1
+    
+)
+
+
+world.place(Portal(color: #colorLiteral(red: 0.4745098054409027, green: 0.8392156958580017, blue: 0.9764705896377563, alpha: 1.0)), atStartColumn:0, startRow:10, atEndColumn:0, endRow:10
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.4745098054409027, green: 0.8392156958580017, blue: 0.9764705896377563, alpha: 1.0)),
+            atStartColumn:1, startRow:11, atEndColumn:1, endRow:11
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.7215686440467834, green: 0.886274516582489, blue: 0.5921568870544434, alpha: 1.0)), atStartColumn:10, startRow:11, atEndColumn:10, endRow:11
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.7215686440467834, green: 0.886274516582489, blue: 0.5921568870544434, alpha: 1.0)),
+            atStartColumn:11, startRow:10, atEndColumn:11, endRow:10
+    
+)
+world.place(Portal(color: #colorLiteral(red: 0.5568627715110779, green: 0.3529411852359772, blue: 0.9686274528503418, alpha: 1.0)), atStartColumn:11, startRow:1, atEndColumn:11, endRow:1
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.5568627715110779, green: 0.3529411852359772, blue: 0.9686274528503418, alpha: 1.0)), atStartColumn:10, startRow:0, atEndColumn:10, endRow:0
+)
+
+world.place(Portal(color: #colorLiteral(red: 0.9098039269447327, green: 0.47843137383461, blue: 0.6431372761726379, alpha: 1.0)), atStartColumn:1, startRow:0, atEndColumn:1, endRow:0
+)
+world.place(Portal(color: #colorLiteral(red: 0.9098039269447327, green: 0.47843137383461, blue: 0.6431372761726379, alpha: 1.0)), atStartColumn:11, startRow:-5, atEndColumn:11, endRow:-5
+)
+
+world.place(Gem(), at: Coordinate(column: 3, row: 7))
+
+world.place(Gem(), at: Coordinate(column: 7, row: 8))
+
+world.place(Gem(), at: Coordinate(column: 8, row: 4))
+
+world.place(Gem(), at: Coordinate(column: 4, row: 3))
+
+world.place(Gem(), at: Coordinate(column: 7, row: -2))
+
+world.place(Wall(),atColumn:2,row:14)
+
+world.place(Wall(),atColumn:3,row:14)
+
+world.place(Wall(),atColumn:4,row:14)
+</string>
+			<key>ModifiedRange</key>
+			<string>{6425, 2439}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
