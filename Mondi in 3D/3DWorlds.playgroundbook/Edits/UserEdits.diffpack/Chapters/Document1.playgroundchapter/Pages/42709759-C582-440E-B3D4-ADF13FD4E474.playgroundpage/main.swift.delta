@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+
+/* Luisa Genovese*/
+
+/*Il mio mondo è uno spettacolo di danza da completare, che dà la possibilità di scegliere i passi, i movimenti, utilizzando i comandi previsti in impara a programmare 2 e allo stesso tempo disattivare i portali, collezionare le gemme, prevedendo l'utilizzo dei comandi presenti in impara a programmare 1.*/
+
+
+//Obiettivo: collezionare tutte le gemme e creare una coreografia di danza!
+
+
+let allCoordinates = world.allPossibleCoordinates
+// Create two empty arrays of type [Coordinate].
+var island : [Coordinate] = []
+var sea : [Coordinate] = []
+
+
+/*Creazione dell'isola.*/ 
+for coordinate in allCoordinates {
+    if coordinate.row &gt; 0 &amp;&amp; coordinate.column &lt; 11 &amp;&amp; 
+        coordinate.column &lt; 9 &amp;&amp;
+        coordinate.row &gt; 0 &amp;&amp;
+        coordinate.row &lt; 7 {
+        
+        // Append to island array.
+        island.append(coordinate)
+    } else {
+        // Append to sea array.
+        sea.append(coordinate)
+    }
+}
+// For your island array, place blocks.
+for allCoordinates in island {
+    world.place(Block(), at: allCoordinates)
+}
+
+// For your sea array, place water.
+for allCoordinates in sea  {
+    world.removeAllBlocks(at: allCoordinates)
+    world.place(Water(), at: allCoordinates)
+}
+let portale = Portal(color: #colorLiteral(red: 0.8078431487083435, green: 0.027450980618596077, blue: 0.3333333432674408, alpha: 1.0))
+let character = Character()
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 1383}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>let hopper1 = Character(name: .hopper)
+let hopper2 = Character(name: .hopper)
+let expert = Expert()
+let expert1 = Expert()
+let expert2 = Expert()
+let expert3 = Expert()
+let expert4 = Expert()
+let expert5 = Expert()
+let expert6 = Expert()
+/*
+ let block1 = Block()
+ let block2 = Block()
+ let block3 = Block()
+ let block4 = Block()
+ let block5 = Block()
+ let block6 = Block()
+ let block7 = Block()
+ let block8 = Block()
+ let block9 = Block()
+ */
+//var pinkPortal = 
+
+
+/*Creazione dei blocchi.*/
+world.place(Block(), atColumn: 2, row: 2)
+world.place(Block(), atColumn: 2, row: 2)
+world.place(character, atColumn: 7, row: 1)
+world.place(Block(), atColumn: 6, row: 2)
+world.place(Block(), atColumn: 6, row: 2)
+world.place(Block(), atColumn: 4, row: 2)
+
+world.place(Block(), atColumn: 4, row: 2)
+world.place(Block(), atColumn: 2, row: 2)
+world.place(Block(), atColumn: 4, row: 2)
+world.place(Block(), atColumn: 6, row: 2)
+world.place(Block(), atColumn: 2, row: 2)
+world.place(Block(), atColumn: 4, row: 2)
+world.place(Block(), atColumn: 6, row: 2)
+
+
+/*Posizionamento delle gemme.*/
+world.place(Gem(), atColumn: 5, row: 2)
+world.place(Gem(), atColumn: 5, row: 3)
+world.place(Gem(), atColumn: 5, row: 4)
+world.place(Gem(), atColumn: 5, row: 5)
+world.place(Gem(), atColumn: 3, row: 2)
+world.place(Gem(), atColumn: 3, row: 3)
+world.place(Gem(), atColumn: 3, row: 4)
+world.place(Gem(), atColumn: 3, row: 5)
+world.place(portale, atColumn: 7, row: 2)
+world.place(portale, atColumn: 4, row: 10)
+world.place(portale, between: Coordinate(column: 7, row: 2), and: Coordinate(column: 4, row: 10))
+world.place(Platform(), at: Coordinate(column: 0, row: 4))
+world.place(Platform(), at: Coordinate(column: 8, row: 4))
+world.place(hopper, atColumn: 0, row: 4)
+world.place(hopper1, atColumn: 8, row: 4)
+world.place(Platform(), at: Coordinate(column: 4, row: 2))
+world.place(hopper2, atColumn: 4, row: 2)
+
+
+/*Costruzione del'isoletta.*/
+for colonne in 8 ... 11 {
+    for righe in 13 ... 15 {
+        world.place(Block(), at: Coordinate(column: colonne, row: righe))
+    }
+}
+
+
+/*Posizionamento dei blocchi sull'isoletta.*/
+
+world.place(Block(), atColumn: 9, row: 13)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 8, row: 13)
+world.place(Block(), atColumn: 9, row: 13)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 8, row: 13)
+world.place(Block(), atColumn: 9, row: 13)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 9, row: 13)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+world.place(Block(), atColumn: 8, row: 13)
+world.place(Block(), atColumn: 9, row: 13)
+world.place(Block(), atColumn: 10, row: 13)
+world.place(Block(), atColumn: 11, row: 13)
+world.place(Block(), atColumn: 11, row: 14)
+world.place(Block(), atColumn: 10, row: 14)
+world.place(Block(), atColumn: 9, row: 14)
+world.place(Block(), atColumn: 8, row: 14)
+world.place(Block(), atColumn: 11, row: 15)
+world.place(Block(), atColumn: 10, row: 15)
+world.place(Block(), atColumn: 9, row: 15)
+world.place(Block(), atColumn: 8, row: 15)
+
+
+/*costruzione delle piattaforme.*/
+world.place(Platform(), at: Coordinate(column: 6, row: 2))
+world.place(Platform(), at: Coordinate(column: 2, row: 2))
+world.place(Platform(), at: Coordinate(column: 11, row: 13))
+
+world.place(Platform(), at: Coordinate(column: 10, row: 15))
+
+world.place(Platform(), at: Coordinate(column: 8, row: 14))
+
+
+/*Posizionamento di expert sulle piattaforme.*/
+world.place(expert, at: Coordinate(column: 2, row: 2))
+world.place(expert1, at: Coordinate(column: 6, row: 2))
+world.place(expert2, at: Coordinate(column: 11, row: 13))
+world.place(expert3, at: Coordinate(column: 10, row: 15))
+
+world.place(expert4, at: Coordinate(column: 8, row: 14))
+
+
+/*Costruzione del muro.*/
+world.place(Wall(), facing: west, atColumn: 6, row: 1)
+world.place(Wall(), facing: east, atColumn: 8, row: 1)
+
+
+/*Posizionamento dei blocchi.*/
+world.place(Block(), atColumn: 6, row: 6)
+world.place(Block(), atColumn: 6, row: 6)
+world.place(Block(), atColumn: 6, row: 6)
+world.place(Block(), atColumn: 4, row: 6)
+world.place(Block(), atColumn: 4, row: 6)
+world.place(Block(), atColumn: 4, row: 6)
+
+
+/*Posizionamento delle piattaforme e di expert su di esse.*/
+
+world.place(Platform(), at: Coordinate(column: 6, row: 6))
+
+world.place(expert5, at: Coordinate(column: 6, row: 6))
+
+world.place(Platform(), at: Coordinate(column: 4, row: 6))
+world.place(expert6, at: Coordinate(column: 4, row: 6))
+var colonne = world.coordinates(inColumns: [0, 11])
+var righe = world.coordinates(inRows: [11, 10])
+for allCoordinates in righe{world.place(Block(), at: allCoordinates)}
+
+
+/*Posizionamento delle piattaforme.*/
+world.place(Platform(), at: Coordinate(column: 0, row: 10));world.place(Platform(), at: Coordinate(column: 11, row: 10))
+</string>
+			<key>ModifiedRange</key>
+			<string>{3966, 7000}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

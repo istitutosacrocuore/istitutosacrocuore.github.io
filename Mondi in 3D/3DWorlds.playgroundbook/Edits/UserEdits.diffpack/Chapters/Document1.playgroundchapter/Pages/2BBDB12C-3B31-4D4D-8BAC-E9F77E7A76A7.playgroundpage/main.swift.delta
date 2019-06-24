@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/*sono quattro torri collegate da portali  su due di esse ci sono due geme se raccolte il livello si conclude*/
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 112}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 5, row: 7));let coords = world.coordinates(inColumns: [9, 10, 11], intersectingRows: [9, 10, 11])
+for coor in coords {
+    for i in 1...8 {
+        world.place(Block(), at: coor)
+    }
+}
+let torre = world.coordinates(inColumns: [9, 10, 11], intersectingRows: [0, 1, 2])
+for torre in torre {
+    for i in 1...8 {
+        world.place(Block(), at: torre)
+    }
+}
+let corgi = world.coordinates(inColumns: [0, 1, 2], intersectingRows: [0, 1, 2])
+for corgi in corgi {
+    for i in 1...8 {
+        world.place(Block(), at: corgi)
+    }
+}
+let torre2 = world.coordinates(inColumns: [0, 1, 2], intersectingRows: [9, 10, 11])
+for torre in torre2 {
+    for i in 1...8 {
+        world.place(Block(), at: torre)
+    }
+}
+let water1 = world.row(5)
+let water2 = world.row(6)
+for Coordinates in water1{
+    world.removeAllBlocks(at: Coordinates)
+    world.place(Water(), at: Coordinates)
+}
+for Coordinates in water2{
+    world.removeAllBlocks(at: Coordinates)
+    world.place(Water(), at: Coordinates)
+}
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.5, alpha: 1.0)), between: Coordinate(column: 10, row: 10), and: Coordinate(column: 10, row: 1))
+var piaggio = 3
+for i in 1 ... 6 {
+    world.place(Platform(onLevel: 9, controlledBy: PlatformLock(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))), at: Coordinate(column: 1, row: piaggio))
+    piaggio += 1
+}
+world.placeGems(at: [Coordinate(column: 10, row: 0)])
+world.place(Portal(color: #colorLiteral(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)), between: Coordinate(column: 6, row: 7), and: Coordinate(column: 6, row: 4))
+world.place(Portal(color: #colorLiteral(red: 0.5, green: 0.0, blue: 0.0, alpha: 1.0)), between: Coordinate(column: 1, row: 1), and: Coordinate(column: 8, row: 2))
+world.place(Portal(color: #colorLiteral(red: 0.5, green: 0.5, blue: 0.0, alpha: 1.0)), between: Coordinate(column: 10, row: 10), and: Coordinate(column: 1, row: 10))
+let Gem = world.placeGems(at: [Coordinate(column: 10, row: 11)])
+func move(distance: Int) {
+    for i in 1...distance{
+        if hopper.isBlocked {
+            hopper.jump()
+        }else{
+            hopper.moveForward()
+        }
+    }
+}
+hopper.turnLeft()
+move(distance: 3)
+hopper.turnRight()
+move(distance: 2)
+hopper.turnLeft()
+hopper.turnLeft()
+move(distance: 10)
+hopper.collectGem()
+hopper.turnLeft()
+hopper.turnLeft()
+move(distance:2 )
+hopper.collectGem()
+</string>
+			<key>ModifiedRange</key>
+			<string>{2695, 2432}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

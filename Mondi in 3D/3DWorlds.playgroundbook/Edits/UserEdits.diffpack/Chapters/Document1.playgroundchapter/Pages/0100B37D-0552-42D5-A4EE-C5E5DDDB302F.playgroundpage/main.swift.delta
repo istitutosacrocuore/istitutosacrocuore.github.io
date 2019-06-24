@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//. MONDO DI: ANNA AVOLIO
+
+/* Questo mondo è un livello, il cui scopo è raccogliere le quattro gemme e azionare gli interruttori spenti, rappresenta però anche una gara formata da quattro concorrenti il cui vincitore attiverà
+ ( nel caso fosse spento ) l'interruttore e raccogliera la gemma nel minor tempo.  Prevede l'utilizzo di comandi del sistema di impara a programmare 1; nella formazione del mondo invece sono previsti anche i comandi di impara a programmare 2. Lascia, inoltre, la possibilità di scelta in quanto alla modalità di risoluzione del livello. */
+//. Inizializzare delle costanti che definiscono un valore booleano, vero o falso. 
+let random1 = randomBool()
+let random2 = randomBool()
+let random3 = randomBool()
+let random4 = randomBool()
+let allCoordinates = world.allPossibleCoordinates
+
+//. Inizializzare degli array vuoti di tipo coordinate
+var mountain : [ Coordinate ] = []
+var sea : [ Coordinate] = []
+var sea2 : [ Coordinate ] = []
+var sea3 : [ Coordinate ] = world.column(3)
+var sea4 : [ Coordinate ] = world.column(8)
+var island : [ Coordinate ] = []
+var walls1 : [ Coordinate ] = []
+var walls2 : [ Coordinate ] = []
+
+//. Selezionare le cordinate nella griglia ed assegnarle agli array, e  inserire le istruzioni da completare nelle cordinate degli array.
+
+for coordinate in allCoordinates {
+    if coordinate.column &gt;= 0 &amp;&amp; coordinate.column &lt;= 11 &amp;&amp; coordinate.row &gt; 1 &amp;&amp; coordinate.row &lt; 4 
+    {
+        sea.append(coordinate)
+    }
+    else {
+        mountain.append(coordinate)
+    }
+}
+
+for AllCoordinates in mountain { 
+    world.place( Block(), at : AllCoordinates)
+}
+
+for AllCoordinates in sea {
+    world.removeAllBlocks(at: AllCoordinates)
+    world.place(Water(), at: AllCoordinates)
+}
+
+for coordinate in allCoordinates { 
+    if coordinate.column &gt;= 0 &amp;&amp; coordinate.column &lt;= 11 &amp;&amp; coordinate.row &gt; 7 &amp;&amp; coordinate.row &lt; 10 
+    {
+        sea2.append(coordinate)
+    }
+}
+
+for allCoordinates in sea2  { 
+    world.removeAllBlocks( at: allCoordinates)
+    world.place( Water(), at: allCoordinates)
+}
+
+for AllCoordinates in sea3 {
+    world.removeAllBlocks ( at : AllCoordinates)
+    world.place ( Water(), at : AllCoordinates)
+}
+
+for AllCoordinates in sea4 {
+    world.removeAllBlocks ( at : AllCoordinates)
+    world.place ( Water(), at : AllCoordinates)
+}
+for coordinate in allCoordinates { 
+    if coordinate.column &gt;= 10 &amp;&amp; coordinate.column &lt;= 10 &amp;&amp; coordinate.row &gt; 3 &amp;&amp; coordinate.row &lt; 8 
+    {
+        walls1.append(coordinate)
+    }
+    
+}
+for coordinate in allCoordinates { 
+    if coordinate.column &gt;= 1 &amp;&amp; coordinate.column &lt;= 1 &amp;&amp; coordinate.row &gt; 3 &amp;&amp; coordinate.row &lt; 8 
+    {
+        walls2.append(coordinate)
+    }
+}
+
+for allCoordinates in walls1 {
+    world.place(Wall(), facing: west, at: allCoordinates)
+}
+
+for allCoordinates in walls2 {
+    world.place(Wall(), facing: east, at: allCoordinates)
+}
+
+//. Posizionare i blocchi di diverse altezze e le scale usando il metodo word.place
+world.place(Block(), atColumn: 6, row: 6)
+world.place(Block(), atColumn: 5, row: 5)
+world.place(Block(), atColumn: 5, row: 6)
+world.place(Block(), atColumn: 6, row: 5)
+
+world.place(Stair(), facing: north , atColumn: 2, row:  1)
+world.place(Stair(), facing: west, atColumn: 9, row:  1)
+world.place(Stair(), facing: south, atColumn: 9, row:  10)
+world.place(Stair(), facing: east, atColumn: 2, row:  10)
+
+for i in 1 ... 2 {
+    world.place ( Block(), atColumn: 4, row :5 )
+    world.place ( Block(), atColumn: 6, row :4 )
+    world.place ( Block(), atColumn: 7, row :6 )
+    world.place ( Block(), atColumn: 5, row :7 )
+    world.place (  Block (), atColumn: 2, row: 0)
+    world.place (  Block (), atColumn: 10, row: 1)
+    world.place (  Block (), atColumn: 9, row: 11)
+    world.place (  Block (), atColumn: 1, row: 10)
+}
+
+for i in 1 ... 3 {
+    world.place ( Block(), atColumn: 4, row :4 )
+    world.place ( Block(), atColumn: 7, row :4 )
+    world.place ( Block(), atColumn: 7, row :7 )
+    world.place ( Block(), atColumn: 4, row :7 )
+    world.place (  Block (), atColumn: 1, row: 0)
+    world.place (  Block (), atColumn: 11, row: 1)
+    world.place (  Block (), atColumn: 10, row: 11)
+    world.place (  Block (), atColumn: 0, row: 10)
+    
+}
+
+for i in 1 ... 4 {
+    world.place (  Block (), atColumn: 0, row: 0)
+    world.place (  Block (), atColumn: 11, row: 0)
+    world.place (  Block (), atColumn: 11, row: 11)
+    world.place (  Block (), atColumn: 0, row: 11)
+}
+
+//. Inizializzare e posizionare i portali di diverso colore sempre usando il metodo word.place
+let redPortal = Portal (color: #colorLiteral(red: 0.7450980544090271, green: 0.1568627506494522, blue: 0.07450980693101883, alpha: 1.0))
+world.place(redPortal, atStartColumn: 4, startRow: 4, atEndColumn: 2, endRow: 6)
+let orangePortal = Portal ( color: #colorLiteral(red: 0.9411764740943909, green: 0.49803921580314636, blue: 0.3529411852359772, alpha: 1.0))
+world.place(orangePortal, atStartColumn: 7, startRow: 4, atEndColumn: 5, endRow: 1)
+let yellowPortal = Portal ( color: #colorLiteral(red: 0.9686274528503418, green: 0.7803921699523926, blue: 0.3450980484485626, alpha: 1.0) )
+world.place(yellowPortal, atStartColumn: 7, startRow: 7, atEndColumn: 9, endRow: 5)
+let blackPortal = Portal ( color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0))
+world.place(blackPortal, atStartColumn: 4, startRow: 7, atEndColumn: 6, endRow: 10)
+
+//. Posizionare le gemme
+var gem = [ Coordinate (column:0, row:0),
+            Coordinate( column: 11, row: 0),
+            Coordinate( column : 11, row: 11),
+            Coordinate ( column: 0, row: 11)]
+for coordinate in gem {
+    world.placeGems(at: [coordinate])
+}
+//. Posizionare i portali, impostando una variabile che posiziona uno switch acceso se vera, sennò uno switch spento
+if random1 == true {
+    var swicthacceso = Switch(open:true)
+    world.place(swicthacceso, atColumn: 5, row :4)
+}else {
+    world.place(Switch(), atColumn: 5, row: 4)
+}
+
+if random2 == true {
+    var swicthacceso = Switch(open:true)
+    world.place(swicthacceso, atColumn: 7 , row  :5)
+}else {
+    world.place(Switch(), atColumn: 7, row: 5)
+}
+
+if random3 == true {
+    var swicthacceso = Switch(open:true)
+    world.place(swicthacceso, atColumn: 6, row :7)
+}else {
+    world.place(Switch(), atColumn: 6, row: 7)
+}
+
+if random4 == true {
+    var swicthacceso = Switch(open:true)
+    world.place(swicthacceso, atColumn: 4, row :6)
+}else {
+    world.place(Switch(), atColumn: 4, row: 6)
+}
+
+//. Inizializzare e posizionare le piattaforme e i blocchi delle serrature delle piattaforme
+let redLock = PlatformLock(color: #colorLiteral(red: 0.7450980544090271, green: 0.1568627506494522, blue: 0.07450980693101883, alpha: 1.0))
+world.place(redLock, at: Coordinate(column: 0, row: 6))
+world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 2, row: 2))
+world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 2, row: 3))
+world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 9, row: 8))
+world.place(Platform(onLevel: 2, controlledBy: redLock),at : Coordinate(column: 9, row: 9))
+let blackLock = PlatformLock (color: #colorLiteral(red: 0.11764705926179886, green: 0.0, blue: 0.06666667014360428, alpha: 1.0))
+world.place(blackLock, facing: north, at: Coordinate(column: 11, row: 5 ))
+world.place(Platform(onLevel: 5, controlledBy: blackLock), at: Coordinate(column: 8, row: 1))
+world.place(Platform(onLevel: 5, controlledBy: blackLock), at: Coordinate(column: 3, row: 10))
+
+//. Inizializzare e posizionare gli Expert
+let expert1 = Expert()
+let expert2 = Expert()
+
+world.place(expert1, facing: north, atColumn : 0, row: 5)
+world.place(expert2, facing: south, atColumn: 11, row: 6)
+
+//. Inizializzare e posizionare i personaggi
+let character = Character()
+let character1 = Character ()
+let character2 = Character()
+let character3 = Character()
+world.place(character, facing: west, atColumn: 5, row : 5)
+world.place(character1, facing: south, atColumn: 6, row : 5)
+world.place(character2, facing: east, atColumn: 6, row : 6)
+world.place(character3, facing: north, atColumn: 5, row : 6)
+
+//. Far ballare i personaggi
+character.breakItDown()
+character1.breakItDown()
+character2.breakItDown()
+character3.breakItDown()
+
+
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 8229}</string>
+			<key>OriginalContent</key>
+			<string>let hopper = Character(name: .hopper)
+world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2545, 93}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+//Andrea Celano                         INTRODUZIONE: Per questo mondo ho sviluppato molta creatività. Mi è venuta questa idea, osservando una scacchiera e ho deciso di trasformare queste piattaforme in una scacchiera ♟, sfruttando la capacità dei portali di poter teletrasportare i personaggi. Ora hai la possibilità di giocare un mondo con portali bianchi e neri, quasi come se fosse una partita a scacchi e prova a completare il livello, buona fortuna!🤞🏻🤔
+
+//Obiettivo: Muovere blu e hopper (i due personaggi), fargli raccogliere tutte le gemme e attivare tutti gli interruttori del mondo
+
+//Per iniziare, ecco alcune istruzioni che ti potrebbero essere d'aiuto:      blu.moveForward() --&gt; per muovere blu hopper.moveForward() --&gt; per muovere hopper                   blu.collectGem() --&gt; per raccogliere la gemma                     hopper.toggleSwitch() --&gt; per attivare un interruttore                        blu.turnLeft() --&gt; per girare a sinistra                               hopper.turnRight() --&gt; per girare a destra         
+
+let blu = Character(name: .blu)
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 1075}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>var column6 = world.coordinates(inColumns : [6])
+var discardedCoordinates: [Coordinate] = []
+
+//Ricorda: solo uno tra tutti questi portali ti porta sulle piattaforme dove si trovano le gemme e gli interruttori, quindi teletrasporta blu e hopper, raccogli tutte le gemme e accendi tutti gli interruttori 
+
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 8, startRow: 1, atEndColumn: 7, endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3, startRow: 6, atEndColumn: 4, endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 5, startRow: 5, atEndColumn: 0, endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 7, startRow: 9, atEndColumn: 11, endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 2,startRow: 7, atEndColumn: 1,endRow: 11)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 8,startRow: 10, atEndColumn: 1,endRow: 11)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 7,startRow: 6, atEndColumn: 11,endRow: 11)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 9,startRow: 10, atEndColumn: 11,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 8,startRow: 9, atEndColumn: 9,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 8,startRow: 8, atEndColumn: 10,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 7,startRow: 7, atEndColumn: 9,endRow: 9)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 11,startRow: 10, atEndColumn: 7,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 10,startRow: 9, atEndColumn: 9,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 7,startRow: 6, atEndColumn: 8,endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 11,startRow: 9, atEndColumn: 5,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 9,startRow: 7, atEndColumn: 10,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 7,startRow: 5, atEndColumn: 8,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 11,startRow: 8, atEndColumn: 10,endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 8,startRow: 5, atEndColumn: 9,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 10,startRow: 5, atEndColumn: 11,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 10,startRow: 6, atEndColumn: 11,endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 11,startRow: 6, atEndColumn: 7,endRow: 4)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 9,startRow: 4, atEndColumn: 10,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 11,startRow: 2, atEndColumn: 11,endRow: 4)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 11,startRow: 3, atEndColumn: 11,endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 9,startRow: 1, atEndColumn: 10,endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 10,startRow: 1, atEndColumn: 8,endRow: 3)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 9,startRow: 2, atEndColumn: 10,endRow: 3)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 10,startRow: 4, atEndColumn: 11,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 8,startRow: 2, atEndColumn: 9,endRow: 3)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1,startRow: 1, atEndColumn: 5,endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 4,startRow: 4, atEndColumn: 5,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 7,startRow: 2, atEndColumn: 11,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 4,startRow: 4, atEndColumn: 5,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3,startRow: 2, atEndColumn: 4,endRow: 1 )
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 4, startRow: 1, atEndColumn: 1, endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 2, startRow: 1, atEndColumn: 3, endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1, startRow: 1, atEndColumn: 4, endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 5, startRow: 11, atEndColumn: 6, endRow: 0)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3, startRow: 2, atEndColumn: 5, endRow: 4 )
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3,startRow: 4, atEndColumn: 3,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1, startRow: 1, atEndColumn: 1, endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 5, startRow: 1, atEndColumn: 2, endRow: 4)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 7, startRow: 3, atEndColumn: 9, endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 5,startRow: 6, atEndColumn: 3,endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 4,startRow: 3, atEndColumn: 5,endRow: 4)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 3,startRow: 1, atEndColumn: 4,endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 5,startRow: 3, atEndColumn: 0,endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 3,startRow: 3, atEndColumn: 2,endRow: 2)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1,startRow: 1, atEndColumn: 1,endRow: 3)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 2,startRow: 3, atEndColumn: 0,endRow: 3)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 1,startRow: 4, atEndColumn: 2,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3,startRow: 6, atEndColumn: 4,endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 5,startRow: 2, atEndColumn: 5,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 3,startRow: 5, atEndColumn: 4,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 5,startRow: 7, atEndColumn: 0,endRow: 4)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1,startRow: 5, atEndColumn: 2,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 3,startRow: 7, atEndColumn: 4,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 5,startRow: 9, atEndColumn: 0,endRow: 6)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 4,startRow: 5, atEndColumn: 0,endRow: 5)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 1,startRow: 6, atEndColumn: 2,endRow: 7)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 4,startRow: 9, atEndColumn: 5,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 0,startRow: 7, atEndColumn: 1,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 3,startRow: 10, atEndColumn: 1,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 0,startRow: 9, atEndColumn: 0,endRow: 11)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 2,startRow: 8, atEndColumn: 3,endRow: 9)
+
+//ATTENZIONE: Alcuni portali ti portano indietro, mentre altri ti possono dare una GROSSA MANO.
+
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 4,startRow: 10, atEndColumn: 0,endRow: 8)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 1,startRow: 9, atEndColumn: 2,endRow: 10)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 0,startRow: 10, atEndColumn: 1,endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), atStartColumn: 7,startRow: 11, atEndColumn: 6,endRow: 11)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 2,startRow: 9, atEndColumn: 7,endRow: 1)
+world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)), atStartColumn: 0,startRow: 1, atEndColumn: 8,endRow: 4)
+
+//Consiglio: Se proprio non riesci a trovare il portale corretto ✖️😞, prova a controllare i primi portali o quelli agli angoli, magari tra quelli, troverai quello giusto🤫😉
+
+for i in 1 ... 3 {
+    world.place(Block(), atColumn: 6, row: 0)
+    world.place(Block(), atColumn: 6, row: 7)
+    world.place(Block(), atColumn: 6, row: 11 )
+    world.place(Block(), atColumn: 6, row: 10)
+    world.place(Block(), atColumn: 6, row: 9)
+    world.place(Block(), atColumn: 6, row: 8)
+    world.place(Block(), atColumn: 6, row: 6)
+    world.place(Block(), atColumn: 6, row: 5)
+    world.place(Block(), atColumn: 6, row: 4)
+    world.place(Block(), atColumn: 6, row: 3)
+    world.place(Block(), atColumn: 6, row: 1)
+    world.place(Block(), atColumn: 6, row: 0)
+}
+
+for i in 1 ... 2 {
+    world.place(Block(), atColumn: 5, row: 11)
+    world.place(Block(), atColumn: 7, row: 11)
+    world.place(Block(), atColumn: 6, row: 1)
+    world.place(Block(), atColumn: 4, row: 11)
+    world.place(Block(), atColumn: 8, row: 11)
+    world.place(Block(), atColumn: 6, row: 2)
+    world.place(Block(), atColumn: 6, row: 2)
+    world.removeBlock(atColumn: 6, row: 8)
+    world.removeBlock(atColumn: 6, row: 10)
+    world.place(Block(), atColumn: 6, row: 10)
+    world.place(Block(), atColumn: 6, row: 5)
+    world.place(Block(), atColumn: 6, row: 3)
+    world.place(Block(), atColumn: 6, row: 8)
+    
+}
+world.place(Block(), atColumn: 6, row: 9)
+world.removeBlock(atColumn: 6, row: 9)
+world.place(Block(), atColumn: 3, row: 11)
+world.place(Block(), atColumn: 2, row: 11)
+world.place(Block(), atColumn: 3, row: 11)
+world.place(Block(), atColumn: 9, row: 11)
+world.place(Block(), atColumn: 10, row: 11)
+world.removeBlock(atColumn: 6, row: 5)
+world.place(Block(), atColumn: 6, row: 4)
+world.place(Block(), atColumn: 6, row: 2)
+world.place(Block(), atColumn: 1, row: 11)
+world.place(Block(), atColumn: 6, row: 0)
+world.place(Block(), atColumn: 11, row: 11)
+world.place(Block(), atColumn: 9, row: 11)
+world.place(Stair(), facing: east, atColumn: 10, row: 11)
+world.place(Gem(), atColumn: 4, row: 11)
+world.place(Stair(), facing: west, atColumn: 2, row: 11)
+world.place(Switch(), atColumn: 9, row: 11)
+world.removeBlock(atColumn: 6, row: 9)
+world.place(Switch(), atColumn: 3, row: 11)
+world.removeBlock(atColumn: 6, row: 8)
+world.place(Block(), atColumn: 6, row: 2)
+world.place(Gem(), atColumn: 8, row: 11)
+world.place(Block(), atColumn: 6, row: 1)
+
+for i in 1...10 {
+    for coordinate in column6 {
+        world.place(Block(), at: coordinate)
+    }
+    discardedCoordinates.append(column6.remove(at: 0))
+}
+world.place(Stair(), facing: south, atColumn: 6, row: 6)
+world.place(Stair(), facing: south, atColumn: 6, row: 4)
+world.place(Stair(), facing: south, atColumn: 6, row: 1)
+world.place(Stair(), facing: south, atColumn: 6, row: 8)
+world.place(Stair(), facing: south, atColumn: 6, row: 9)
+world.place(Switch(), atColumn: 6, row: 10)
+world.place(Switch(), atColumn: 6, row: 7)
+world.place(Switch(), atColumn: 6, row: 5)
+world.place(Switch(), atColumn: 6, row: 3)
+world.place(Wall(), facing: south, atColumn: 8, row: 11)
+world.place(Wall(), facing: south, atColumn: 9, row: 11)
+world.place(Wall(), facing: south, atColumn: 8, row: 11)
+world.place(Wall(), facing: north, atColumn: 9, row: 11)
+world.place(Wall(), facing: north, atColumn: 8, row: 11)
+world.place(Wall(), facing: south, atColumn: 7, row: 11)
+world.place(Wall(), facing: south, atColumn: 10, row: 11)
+world.place(Wall(), facing: north, atColumn: 10, row: 11)
+world.place(Wall(), facing: south, atColumn: 2, row: 11)
+world.place(Wall(), facing: south, atColumn: 3, row: 11)
+world.place(Wall(), facing: south, atColumn: 4, row: 11)
+world.place(Wall(), facing: south, atColumn: 5, row: 11)
+world.place(Wall(), facing: south, atColumn: 2, row: 11)
+world.place(Wall(), facing: south, atColumn: 3, row: 11)
+world.place(Wall(), facing: south, atColumn: 4, row: 11)
+world.place(Wall(), facing: south, atColumn: 5, row: 11)
+world.place(Wall(), facing: south, atColumn: 2, row: 11)
+world.place(Wall(), facing: south, atColumn: 3, row: 11)
+world.place(Wall(), facing: south, atColumn: 4, row: 11)
+world.place(Wall(), facing: south, atColumn: 2, row: 11)
+world.place(Wall(), facing: south, atColumn: 3, row: 11)
+world.place(Wall(), facing: south, atColumn: 4, row: 11)
+world.place(Wall(), facing: south, atColumn: 5, row: 11)
+world.place(Wall(), facing: north, atColumn: 4, row: 11)
+world.place(Wall(), facing: north, atColumn: 3, row: 11)
+world.place(Wall(), facing: north, atColumn: 2, row: 11)
+world.place(Wall(), facing: south, atColumn: 1, row: 11)
+world.place(Wall(), facing: south, atColumn: 11, row: 11)
+world.place(Gem(), atColumn: 6, row: 1)
+world.place(hopper, atColumn: 9, row: 0)
+world.place(blu, atColumn: 2, row: 0)
+blu.turnLeft()
+blu.turnLeft()
+blu.turnRight()
+hopper.turnLeft()
+hopper.turnLeft()
+hopper.breakItDown()
+hopper.turnUp()
+blu.danceLikeNoOneIsWatching()
+blu.argh()
+blu.turnLeft()
+//Oh blu, non disperarti! Magari un giorno ballerai meglio di hopper 😅🤫🤣
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{3658, 15779}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/*in questo livello ho semplicemente fatto un rompicapo, un livello che ho creato facendolo il più difficile possibile, mi sono servito di portali e di piattaforme per ciò.
+ PS. quando si passa sopra un interruttore (acceso o spento che sia) succedono cose...particolari, auguri */
+let expert = Expert()
+world.place(expert, at: Coordinate(column: 1, row: 0))
+let redLock = PlatformLock(color: #colorLiteral(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0))
+world.place(redLock, facing: east, at: Coordinate(column: 0, row: 0))
+let greenLock = PlatformLock(color: #colorLiteral(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0))
+world.place(greenLock, at: Coordinate(column: 1, row: 1))
+let blueLock = PlatformLock(color: #colorLiteral(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0))
+world.place(blueLock, facing: west, at: Coordinate(column: 6, row: 0))
+let allCoordinates = world.allPossibleCoordinates
+for Coordinates in allCoordinates {
+    world.removeBlock(at: Coordinates)
+    world.place(Water(), at: Coordinates)
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 1012}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{2545, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 11, row: 11))
+let pinkPortal = Portal(color: #colorLiteral(red: 1.0, green: 0, blue: 1.0, alpha: 1.0))
+world.place(pinkPortal, between: Coordinate(column: 11, row: 10), and: Coordinate(column: 4, row: 3))
+world.placeGems(at: [Coordinate(column: 0, row: 11), Coordinate(column: 4, row: 4), Coordinate(column: 11, row: 9)])
+for i in 1 ... 2 {
+    world.placeBlocks(at: [Coordinate(column: 0, row: 0), Coordinate(column: 1, row: 0), Coordinate(column: 1, row: 1), Coordinate(column: 2, row: 0), Coordinate(column: 5, row: 0), Coordinate(column: 6, row: 0)])
+}
+
+world.placeBlocks(at: [Coordinate(column: 5, row: 5), Coordinate(column: 5, row: 4), Coordinate(column: 11, row: 10), Coordinate(column: 5, row: 6), Coordinate(column: 8, row: 3), Coordinate(column: 7, row: 6), Coordinate(column: 6, row: 5), Coordinate(column: 7, row: 7)])
+let yellowPortal = Portal(color: #colorLiteral(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0))
+world.place(yellowPortal, between: Coordinate(column: 5, row: 6), and: Coordinate(column: 0, row: 11))
+world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 4, row: 0))
+let redPortal = Portal(color: #colorLiteral(red: 1.0, green: 0.0, blue: 0, alpha: 1.0))
+world.place(redPortal, between: Coordinate(column: 5, row: 3), and: Coordinate(column: 5, row: 5))
+world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 5, row: 3))
+world.place(Platform(onLevel: 2, controlledBy: blueLock), at: Coordinate(column: 3, row: 0))
+world.place(Platform(onLevel: 1, controlledBy: greenLock), at: Coordinate(column: 7, row: 4))
+world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 6, row: 3))
+world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 7, row: 3))
+world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 7, row: 5))
+world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 7, row: 4))
+world.place(Platform(onLevel: 2, controlledBy: PlatformLock(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))), at: Coordinate(column: 9, row: 3))
+world.place(Platform(onLevel: 1, controlledBy: greenLock), at: Coordinate(column: 9, row: 4))
+world.place(Platform(onLevel: 8, controlledBy: PlatformLock(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))), at: Coordinate(column: 8, row: 4))
+world.place(Switch(open: true), at: Coordinate(column: 8, row: 3))
+let cyanPortal = Portal(color: #colorLiteral(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0))
+world.place(cyanPortal, between: Coordinate(column: 7, row: 6), and: Coordinate(column: 0, row: 1))
+let greenPortal = Portal(color: #colorLiteral(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0))
+world.place(greenPortal, between: Coordinate(column: 6, row: 5), and: Coordinate(column: 11, row: 9))
+greenPortal.isActive = false
+func hopperMove(distance: Int, turning: Bool, times: Int) {
+    for i in 1 ... distance {
+        if hopper.isBlocked {
+            hopper.jump()
+        }else{
+            hopper.moveForward()
+        }
+        if hopper.isOnGem {
+            hopper.collectGem()
+        }
+        if hopper.isOnOpenSwitch{
+            world.placeBlocks(at: [Coordinate(column: 0, row: 1), Coordinate(column: 0, row: 2), Coordinate(column: 0, row: 3), Coordinate(column: 0, row: 4), Coordinate(column: 0, row: 5), Coordinate(column: 0, row: 10)])
+            world.place(Switch(), at: Coordinate(column: 0, row: 10))
+            world.place(Wall(), facing: south, at: Coordinate(column: 11, row: 10))
+            greenPortal.isActive = true
+            world.removeItems(at: Coordinate(column: 7, row: 4))
+            world.removeItems(at: Coordinate(column: 7, row: 4))
+            world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 7, row: 4))
+            world.removeItems(at: Coordinate(column: 3, row: 0))
+            world.placeBlocks(at: [Coordinate(column: 3, row: 0), Coordinate(column: 3, row: 0)])
+        }
+        if hopper.isOnClosedSwitch {
+            hopper.toggleSwitch()
+            world.place(Platform(onLevel: 10, controlledBy: PlatformLock(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))), at: Coordinate(column: 4, row: 5))
+            world.place(Wall(), facing: west, at: Coordinate(column: 5, row: 5))
+            world.placeBlocks(at: [Coordinate(column: 0, row: 9), Coordinate(column: 0, row: 8), Coordinate(column: 0, row: 7), Coordinate(column: 0, row: 6)])
+            world.place(Portal(color: #colorLiteral(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)), between: Coordinate(column: 4, row: 4), and: Coordinate(column: 4, row: 5))
+            world.place(Platform(onLevel: 3, controlledBy: greenLock), at: Coordinate(column: 5, row: 1))
+            world.place(Platform(onLevel: 5, controlledBy: redLock), at: Coordinate(column: 5, row: 1))
+            world.place(Platform(onLevel: 5, controlledBy: blueLock), at: Coordinate(column: 2, row: 5))
+            world.place(Platform(onLevel: 4, controlledBy: greenLock), at: Coordinate(column: 3, row: 5))
+            world.place(Platform(onLevel: 2, controlledBy: redLock), at: Coordinate(column: 1, row: 5))
+            greenPortal.isActive = false
+            cyanPortal.isActive = false
+            pinkPortal.isActive = false
+            redPortal.isActive = false
+            yellowPortal.isActive = false
+        }
+    }
+    if turning == true {
+        for i in 1 ... times {
+            hopper.turnLeft()
+        }
+    }
+}
+func expertMove(distance: Int, turning: Bool, times: Int, turnLock: Bool, Up: Bool, locking: Int) {
+    if distance != 0{
+        for i in 1 ... distance {
+            expert.moveForward()
+        }
+    }
+    if turning == true {
+        for i in 1 ... times {
+            expert.turnLeft()
+        }
+    }
+    if turnLock == true {
+        for i in 1 ... locking {
+            if Up == true {
+                expert.turnLockUp()
+            }else{
+                expert.turnLockDown()
+            }
+        }
+    }
+}
+let what = randomInt(from: 1, to: 4)
+for i in 1...5 {
+    world.placeBlocks(at: [Coordinate(column: 11, row: 0)])
+}
+if what == 1 {
+    world.place(Character(name: .byte), at: Coordinate(column: 11, row: 0))
+}
+if what == 2 {
+    world.place(Character(name: .hopper), at: Coordinate(column: 11, row: 0))
+}
+if what == 3 {
+    world.place(Character(name: .blu), at: Coordinate(column: 11, row: 0))
+}
+if what == 4 {
+    world.place(Expert(), at: Coordinate(column: 11, row: 0))
+}
+//************************************
+</string>
+			<key>ModifiedRange</key>
+			<string>{3595, 6581}</string>
+			<key>OriginalContent</key>
+			<string>world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2583, 55}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
