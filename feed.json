@@ -13,11 +13,11 @@
 		"difficultyLevel": "beginner",
 		"contentIdentifier": "io.github.istitutosacrocuore.3DWorlds",
 		"contentVersion": "1.0.2",
-		"url": "https://istitutosacrocuore.github.io/Mondi in 3D/Il mio mondo copia 2.playgroundbook.zip",
+		"url": "https://istitutosacrocuore.github.io/3DWorlds/3DWorlds.playgroundbook.zip",
 		"publishedDate": "2017-08-09T09:00:00+07:00",
 		"lastUpdatedDate" : "2017-09-10T12:00:00+07:00",
-		"thumbnailURL": "https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png",
-		"bannerImageURL" : "https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png",
+		"thumbnailURL": "https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png",
+		"bannerImageURL" : "https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png",
 		"additionalInformation" : [
 			{
 			"name": "Autore:",
@@ -37,7 +37,7 @@
 			"value": "Italiano"
 			}
 		],
-		"previewImageURLs" : ["https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png"]
+		"previewImageURLs" : ["https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png"]
 	}
 ]
 }
