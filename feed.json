@@ -6,18 +6,18 @@
 	"formatVersion": "1.1",
 	"documents": [
 	{
-		"title" : "Swift the Basics",
+		"title" : "Mondi in 3D",
 		"overviewSubtitle" : "Domenico Caggiano",
-		"detailSubtitle": "Swift the Basics",
-		"description": "Swift the Basics",
+		"detailSubtitle": "Mondi in 3D",
+		"description": "Mondi in 3D",
 		"difficultyLevel": "beginner",
-		"contentIdentifier": "io.github.dcswiftdeveloper.theBasics",
+		"contentIdentifier": "io.github.dcswiftdeveloper.Mondi in 3D",
 		"contentVersion": "1.0.2",
-		"url": "https://dcswiftdeveloper.github.io/theBasics/theBasics.playgroundbook.zip",
+		"url": "https://istitutosacrocuore.github.io/Mondi in 3D/Il mio mondo copia 2.playgroundbook.zip",
 		"publishedDate": "2017-08-09T09:00:00+07:00",
 		"lastUpdatedDate" : "2017-09-10T12:00:00+07:00",
-		"thumbnailURL": "https://dcswiftdeveloper.github.io/theBasics/swiftLogo.png",
-		"bannerImageURL" : "https://dcswiftdeveloper.github.io/theBasics/swiftLogo.png",
+		"thumbnailURL": "istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png",
+		"bannerImageURL" : "https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png",
 		"additionalInformation" : [
 			{
 			"name": "Autore:",
@@ -37,7 +37,7 @@
 			"value": "Italiano"
 			}
 		],
-		"previewImageURLs" : ["https://dcswiftdeveloper.github.io/theBasics/swiftLogo.png","https://dcswiftdeveloper.github.io/theBasics/swiftLogo.png","https://dcswiftdeveloper.github.io/theBasics/swiftLogo.png"]
+		"previewImageURLs" : ["https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png"]
 	},
 		{
 		"title" : "QuizBot Challenge",
