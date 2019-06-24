@@ -1,0 +1,40 @@
+"FirstProseBlock" = " # CREA TU PROPIO MONDRIAN
+
+**Piet Mondrian** fue un pintor holandés que vivió a caballo entre finales del SXIX y la primera mitad del SXX. Uno de los primeros representantes del **arte abstracto**, este pintor encontró en las figuras geométricas la forma de acercarse a la estructura básica del unierso.
+
+![Piet Mondrian en su estudio](Mondriaan.jpg)
+![Firma de Mondrian](Mondrian_Signatur.png)
+
+Defendía que el arte no debía ser **figurativo**, es decir, no debía centrearse en representar la realidad sino que debe servir para indagar más allá de lo que ven nuestros propios ojos.
+
+Hoy en día sus pinturas se venden en masa como láminas decorativas. Pero no olvidemos cuando veamos uno de sus cuadros en cualquier casa o tienda que el autor, más allá de crear algo bello estéticamente, buscaba una comprensión más profunda de la realidad.
+
+![Lámina de Mondrian](IMG_5727.JPG)
+";
+"DosProseBlock" = " ## DONDE LA ABSTRACCIÓN SE UNE AL ALGORITMO
+
+El que ves arriba es un ejemplo de la pintura geométrica de Mondrian. Nuestra intención es replicarla usando líneas de código del lenguaje de programación **Swift**
+
+Uniremos el siglo pasado con este gracias a la **programación**.
+
+
+En las líneas de abajo debes declarar como `constantes` las etiquetas que formarán parte de tu cuadro. Recuerda nombrar adecuadamente cada constante para que al leerlas sepamos a qué figura geométrica se refieren concretamente.
+
+Esos objetos los deberás ubicar dentro de un eje de coordenadas que es la pantalla o `liveview`.
+
+## TU MONDRIAN
+
+> **Prueba a modificar los números de las dos etiquetas de abajo para ver lo que ocurre.**
+";
+"TresProseBlock" = " > **Bien ahora declara tus propias figuras geométricas para replicar el cuadro de arriba.**
+";
+"FourProseBlock" = " > Modifica el color de las figuras geométricas que acabas de crear cambiando la **propiedad** `backgroundColor` que tienen las `UILabel`.
+";
+"CincoProseBlock" = " > Puedes hacerlo aquí abajo.
+";
+"SeisProseBlock" = " > Firma el cuadro con tu flamante nombre artístico. También puedes cambiar el color de la letra.
+";
+"SieteProseBlock" = " Añade los objetos que has creado a vista siguiendo la estructura que ves más abajo.
+";
+"OchoProseBlock" = " > Hazlo aquí abajo.
+";
