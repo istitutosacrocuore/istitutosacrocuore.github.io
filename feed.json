@@ -38,40 +38,6 @@
 			}
 		],
 		"previewImageURLs" : ["https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png","https://istitutosacrocuore.github.io/Mondi in 3D/swiftLogo.png"]
-	},
-		{
-		"title" : "QuizBot Challenge",
-		"overviewSubtitle" : "Domenico Caggiano",
-		"detailSubtitle": "Costruiamo un Quiz interrattivo",
-		"description": "L'attività propone lo sviluppo di un playground per la creazione di un Bot con intelligenza artificiale, con cui l'utente può interagire per la compilazione di un quiz a risposta multipla multidisciplinare, con valutazione e correzione delle risposte date. L'approccio utilizzato è basato sul paradigma divide et impera, che rende facilmente riutilizzabile il codice ed adattabile a diversi scenari didattici. Punteggi, aree tematiche, domande e risposte sono personalizzabili.",
-		"difficultyLevel": "intermediate",
-		"contentIdentifier": "io.github.dcswiftdeveloper.quizBot",
-		"contentVersion": "1.0.3",
-		"url": "https://dcswiftdeveloper.github.io/quizBot/quizBot.playgroundbook.zip",
-		"publishedDate": "2018-07-09T09:00:00+07:00",
-		"lastUpdatedDate" : "2018-07-10T12:00:00+07:00",
-		"thumbnailURL": "https://dcswiftdeveloper.github.io/quizBot/quizBot.png",
-		"bannerImageURL" : "https://dcswiftdeveloper.github.io/quizBot/quizBot.png",
-		"additionalInformation" : [
-			{
-			"name": "Autore:",
-			"value": "Domenico Caggiano"
-			},
-			{
-			"name": "Versione:",
-			"value": "1.1"
-			},
-			{
-			"type": "date",
-			"name": "Data di uscita:",
-			"value": "2019-04-19T12:00:00+00:00"
-			},
-			{
-			"name": "Languages:",
-			"value": "Italiano"
-			}
-		],
-		"previewImageURLs" : ["https://dcswiftdeveloper.github.io/quizBot/quizBot.png","https://dcswiftdeveloper.github.io/quizBot/quizBot.png","https://dcswiftdeveloper.github.io/quizBot/quizBot.png"]
 	}
 ]
 }
