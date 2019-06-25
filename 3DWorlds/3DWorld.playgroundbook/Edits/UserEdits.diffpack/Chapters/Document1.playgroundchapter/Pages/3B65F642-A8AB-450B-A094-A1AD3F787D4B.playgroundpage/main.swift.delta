@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Luca Bernasconi
+/*
+ L'obiettivo è attivare gli interrutori spenta e raccogliere la gemma 
+ */
+
+//piazzamento dei blocchi
+let coordinate = world.coordinates(inColumns: [0,1,2,3,4,5,6,7,8,9,10,11], intersectingRows: [11,10])
+let allCoordinates = world.allPossibleCoordinates
+var sea : [Coordinate] = []
+for coordinate in allCoordinates {
+    sea.append(coordinate)
+    world.removeBlock(at: coordinate)
+    world.placeWater(at: [coordinate])
+    
+}
+for coordinate in coordinate {
+    world.removeBlock(at:coordinate)
+}
+var coordinate2 = world.coordinates(inColumns: [0,1,2,3,4,5,6,7,8,9,10,11], intersectingRows: [4,5,6,7])
+for coordinate in coordinate2{
+    world.placeBlocks(at: [coordinate])
+}
+var coordinate3 = world.coordinates(inColumns: [4,5,6,7], intersectingRows: [0,1,2,3,4,5,6,7,8,9,10,11])
+for coordinte in coordinate3 {
+    world.placeBlocks(at: [coordinte])
+}
+//collocamento delle scale
+world.place(Stair(),facing: west, at: Coordinate(column: 3, row: 6))
+world.place(Stair(),facing: west, at: Coordinate(column: 3, row: 5))
+world.place(Stair(),facing: east, at: Coordinate(column: 8, row: 5))
+world.place(Stair(),facing: east, at: Coordinate(column: 8, row: 6))
+world.place(Stair(),facing: south, at: Coordinate(column: 6, row: 3))
+world.place(Stair(),facing: south, at: Coordinate(column: 5, row: 3))
+world.place(Stair(),facing: north, at: Coordinate(column: 6, row: 8))
+world.place(Stair(),facing: north, at: Coordinate(column: 5, row: 8))
+var coordinate4 = world.coordinates(inColumns: [4,5,6,7], intersectingRows: [7,6,5,4])
+for coordinate in coordinate4{
+    for i in 1 ... 10 {
+        
+        
+        world.placeBlocks(at: [coordinate])
+    }
+}
+//piazzamento dei portali
+let orangeportal = Portal(color:  #colorLiteral(red: 0.9254902005195618, green: 0.23529411852359772, blue: 0.10196078568696976, alpha: 1.0))
+world.place(orangeportal, atStartColumn: 8, startRow: 5, atEndColumn:
+    5, endRow: 4)
+let blackportal = Portal(color:  #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0))
+world.place(blackportal, atStartColumn: 3, startRow: 5, atEndColumn: 6, endRow: 4)
+world.place(Switch(), at: Coordinate(column: 11, row: 4))
+world.place(Gem(), at: Coordinate(column: 5, row: 6))
+//inizializzazione e piazzamento del personaggio
+let byte = Character(name: .byte)
+world.place(byte, facing: east, at: Coordinate(column: 0, row: 5))
+let expert = Expert()
+let coordinate5 = world.coordinates(inColumns: [11,10,9], intersectingRows: [11,10,9])
+for coordinate in  coordinate5  {
+    world.placeBlocks(at: [coordinate])
+}
+// aggiunta delle piattaforme
+world.place(expert,facing:south, at: Coordinate(column: 11, row: 10))
+let platformLockBlue = PlatformLock(color: #colorLiteral(red: 0.21960784494876862, green: 0.007843137718737125, blue: 0.8549019694328308, alpha: 1.0))
+world.place(platformLockBlue,facing: north, at: Coordinate(column: 11, row: 9))
+world.place(Platform(onLevel: 1, controlledBy: platformLockBlue), at: Coordinate(column: 10, row: 3))
+world.place(Platform(onLevel: 1, controlledBy: platformLockBlue), at: Coordinate(column: 9, row: 2))
+world.place(Platform(onLevel: 1, controlledBy: platformLockBlue), at: Coordinate(column: 8, row: 1))
+world.placeGems(at: [Coordinate(column: 5, row: 0)])
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{2545, 3236}</string>
+			<key>OriginalContent</key>
+			<string>let hopper = Character(name: .hopper)
+world.place(hopper, at: Coordinate(column: 1, row: 1))
+</string>
+			<key>OriginalRange</key>
+			<string>{2545, 93}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
