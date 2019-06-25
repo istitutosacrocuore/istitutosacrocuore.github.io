@@ -39,7 +39,7 @@
 		],
 		"previewImageURLs" : ["https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png"]
 	},
-	{
+		{
 		"title" : "Risolutore equazioni",
 		"overviewSubtitle" : "Domenico Caggiano",
 		"detailSubtitle": "Risolutore equazioni",
@@ -50,8 +50,8 @@
 		"url": "https://istitutosacrocuore.github.io/risolutoreEquazioni/risolutore_equazioni.playgroundbook.zip",
 		"publishedDate": "2017-08-09T09:00:00+07:00",
 		"lastUpdatedDate" : "2017-09-10T12:00:00+07:00",
-		"thumbnailURL": "https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png",
-		"bannerImageURL" : "https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png",
+		"thumbnailURL": "https://istitutosacrocuore.github.io/risolutoreEquazioni/swiftLogo.png",
+		"bannerImageURL" : "https://istitutosacrocuore.github.io/risolutoreEquazioni/swiftLogo.png",
 		"additionalInformation" : [
 			{
 			"name": "Autore:",
@@ -71,7 +71,7 @@
 			"value": "Italiano"
 			}
 		],
-		"previewImageURLs" : ["https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png","https://istitutosacrocuore.github.io/3DWorlds/swiftLogo.png"]
+		"previewImageURLs" : ["https://istitutosacrocuore.github.io/risolutoreEquazioni/swiftLogo.png","https://istitutosacrocuore.github.io/risolutoreEquazioni/swiftLogo.png","https://istitutosacrocuore.github.io/risolutoreEquazioni/swiftLogo.png"]
 	}	
 ]
 }
