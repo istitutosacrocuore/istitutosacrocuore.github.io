@@ -1,1 +1,1 @@
-# School Works on Swift programmming language & related projects
+# School Works on Swift programming language & related projects
