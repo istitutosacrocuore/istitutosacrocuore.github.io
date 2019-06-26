@@ -6,10 +6,10 @@
 	"formatVersion": "1.1",
 	"documents": [
 	{
-		"title" : "Mondi in 3D",
+		"title" : "Libera l'immaginazione!",
 		"overviewSubtitle" : "Istituto Sacro Cuore - Napoli",
-		"detailSubtitle": "Creazione di ricche ambientazioni per Byte, Hopper, Blu ed Espert",
-		"description": "Mondi in 3D",
+		"detailSubtitle": "Creazione di ricche ambientazioni in 3D",
+        "description": "Gli studenti dell'Istituto Sacro Cuore hanno utilizzato i contentuti e strutture presentate nei corsi Impara a programmare 1&2 come punto di partenza per creare straordinari mondi trindimensionali per Byte, Hopper, Blu ed Expert. Realizzate torri e ponti con blocchi  con ",
 		"difficultyLevel": "beginner",
 		"contentIdentifier": "io.github.istitutosacrocuore.3DWorlds",
 		"contentVersion": "2.0",
@@ -20,8 +20,8 @@
 		"bannerImageURL" : "https://istitutosacrocuore.github.io/3DWorlds/cover.png",
 		"additionalInformation" : [
 			{
-			"name": "Autore:",
-			"value": "Domenico Caggiano"
+			"name": "Editore:",
+			"value": "Istituto Sacro Cuore"
 			},
 			{
 			"name": "Versione:",
@@ -30,7 +30,7 @@
 			{
 			"type": "date",
 			"name": "Data di uscita:",
-			"value": "2019-04-19T12:00:00+00:00"
+			"value": "2019-07-15T12:00:00+00:00"
 			},
 			{
 			"name": "Languages:",
