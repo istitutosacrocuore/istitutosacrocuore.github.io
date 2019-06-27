@@ -9,7 +9,8 @@
 		"title" : "Libera l'immaginazione!",
 		"overviewSubtitle" : "Crea un mondo tutto tuo",
 		"detailSubtitle": "Creazione di ricche ambientazioni in 3D",
-        "description": "Gli studenti dell'Istituto Sacro Cuore di Napoli, hanno utilizzato i contentuti e le strutture presentate nei corsi Impara a programmare 1&2 come punto di partenza per creare straordinari mondi tridimensionali e nuove sfide per i personaggi Byte, Hopper, Blu ed Expert. Torri, ponti, isole e labirinti sono stati arricchiti con elementi di gioco come gemme, portali ed interruttori".
+        "description": "Gli studenti dell'Istituto Sacro Cuore di Napoli, hanno utilizzato i contentuti e le strutture presentate nei corsi Impara a programmare 1&2 come punto di partenza per creare straordinari mondi tridimensionali e nuove sfide per i personaggi Byte, Hopper, Blu ed Expert. Torri, ponti, isole e labirinti sono stati arricchiti con elementi di gioco come gemme, portali ed interruttori."
+        
         "Un'avventura entusiasmante che ha generato nuovi livelli da far risolvere all'utente oppure strutture all'interno delle quali i personaggi devono essere opporuntamente guidati usando il codice. Divertiti anche tu: puoi trarre ispirazione dal nostro Playground Book, per creare qualcosa di straordinario: un mondo tutto tuo!",
 		"difficultyLevel": "beginner",
 		"contentIdentifier": "io.github.istitutosacrocuore.3DWorlds",
