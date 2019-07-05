@@ -276,8 +276,7 @@ for colonne in 0 ... 4 {
  world.place(Block(), at: Coordinate(column: colonne, row: righe))
  }
  }
- 
- */
+
 
 let coordi = world.coordinates(inColumns: [9, 10, 11], intersectingRows: [2, 1, 0])
 for coordi in coordi {
