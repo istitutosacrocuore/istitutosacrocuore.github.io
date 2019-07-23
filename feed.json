@@ -14,8 +14,8 @@
 		"contentIdentifier": "io.github.istitutosacrocuore.3DWorlds",
 		"contentVersion": "2.0",
 		"url": "https://istitutosacrocuore.github.io/3DWorlds/3DWorld.playgroundbook.zip",
-		"publishedDate": "2017-08-09T09:00:00+07:00",
-		"lastUpdatedDate" : "2017-09-10T12:00:00+07:00",
+		"publishedDate": "2019-07-23T09:00:00+07:00",
+		"lastUpdatedDate" : "2019-07-23T12:00:00+07:00",
 		"thumbnailURL": "https://istitutosacrocuore.github.io/3DWorlds/cover.png",
 		"bannerImageURL" : "https://istitutosacrocuore.github.io/3DWorlds/cover.png",
 		"additionalInformation" : [
@@ -30,7 +30,7 @@
 			{
 			"type": "date",
 			"name": "Data di uscita:",
-			"value": "2019-07-15T12:00:00+00:00"
+			"value": "2019-07-23T12:00:00+00:00"
 			},
 			{
 			"name": "Languages:",
