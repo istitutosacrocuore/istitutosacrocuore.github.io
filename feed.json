@@ -38,6 +38,40 @@
 			}
 		],
         "previewImageURLs" : ["https://istitutosacrocuore.github.io/3DWorlds/puzzle_world_1.jpg","https://istitutosacrocuore.github.io/3DWorlds/puzzle_world_2.jpg","https://istitutosacrocuore.github.io/3DWorlds/puzzle_world_3.jpg","https://istitutosacrocuore.github.io/3DWorlds/puzzle_world_4.jpg"]
+	},
+		{
+		"title" : "Social Media Manager",
+		"overviewSubtitle" : "Condividi il tuo post!",
+		"detailSubtitle": "Gestione e condivisione di post attraverso Swift Playground",
+		"description": "Alcuni studenti del corso \"Swift Coding Club\" dell’Istituto Sacro Cuore di Napoli hanno acquisito competenze avanzate di programmazione per sviluppare un’idea condivisa a lezione con i compagni di classe, realizzando una versione rivisitata in \"salsa Swift\" di un Social Network. \n\nIl progetto, che ha richiesto una profonda personalizzazione del modello \"Risposte\", consente, attraverso alcune fasi guidate, la gestione delle seguenti operazioni disponibili su un post: \n * creazione e personalizzazione delle proprietà (testo, immagine, tag, hashtag, commenti e like) \n * gestione (modifica delle proprietà ed eliminazione) \n * condivisione tramite email \n * salvataggio su file \n * gestione della galleria immagini \n\nCrea il tuo primo Post, personalizzando tutte le proprietà disponibili! \nEventualmente potrai condividerlo con i tuoi amici, lasciandoti aiutare dall’assistente virtuale, che ti guiderà nel processo. \nOppure prova anche tu a realizzare una versione personalizzata del modello \"Risposte\", seguendo i suggerimenti forniti nel Playground Book!",
+		"difficultyLevel": "advanced",
+		"contentIdentifier": "io.github.istitutosacrocuore.socialMediaPostManager",
+		"contentVersion": "1.0.2",
+		"url": "https://istitutosacrocuore.github.io/SocialMediaPM/socialMediaManager.playgroundbook.zip",
+		"publishedDate": "2017-08-09T09:00:00+07:00",
+		"lastUpdatedDate" : "2017-09-10T12:00:00+07:00",
+		"thumbnailURL": "https://istitutosacrocuore.github.io/SocialMediaPM/socialMediaManagerLogov2.png",
+		"bannerImageURL" : "https://istitutosacrocuore.github.io/SocialMediaPM/socialMediaManagerLogov2.png",
+		"additionalInformation" : [
+			{
+			"name": "Autore:",
+			"value": "Swift Coding Club"
+			},
+			{
+			"name": "Versione:",
+			"value": "1.1"
+			},
+			{
+			"type": "date",
+			"name": "Data di uscita:",
+			"value": "2021-09-05T12:00:00+00:00"
+			},
+			{
+			"name": "Languages:",
+			"value": "Italiano"
+			}
+		],
+		"previewImageURLs" : ["https://istitutosacrocuore.github.io/SocialMediaPM/smpm_1.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_2.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_3.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_4.jpg"]
 	}
 ]
 }
