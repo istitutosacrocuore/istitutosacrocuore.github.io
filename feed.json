@@ -72,6 +72,40 @@
 			}
 		],
 		"previewImageURLs" : ["https://istitutosacrocuore.github.io/SocialMediaPM/smpm_1.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_2.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_3.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_4.jpg"]
+	},
+		{
+		"title" : "Feel It",
+		"overviewSubtitle" : "A new way to feel color",
+		"detailSubtitle": "WWDC23 Swift Student Challenge Winner!",
+		"description": "\"Feel It\" is a palette creator that has as its primary goal the sensibilisation of users to use colour in a more thoughtful way, having the feelings that colour can convey in mind.\nThe app lets the user create palettes, add colours to them through an RGB-value editor, select the feeling that they mean to convey, from a base-selection drawn from the papers I studied. \nThis information will be used to determine a \"coherence score\" and plot a graph of what the palette transmits.\n\"Feel It\" works in both light and dark mode and with VoiceOver. ",
+		"difficultyLevel": "advanced",
+		"contentIdentifier": "io.github.istitutosacrocuore.feelIt",
+		"contentVersion": "1.0.3",
+		"url": "https://istitutosacrocuore.github.io/FeelIt/FeelIt.swiftpm.zip",
+		"publishedDate": "2018-07-09T09:00:00+07:00",
+		"lastUpdatedDate" : "2018-07-10T12:00:00+07:00",
+		"thumbnailURL": "https://istitutosacrocuore.github.io/FeelIt/feelItAppIcon.png",
+		"bannerImageURL" : "https:istitutosacrocuore.github.io/FeelIt/feelItAppIcon.png",
+		"additionalInformation" : [
+			{
+			"name": "Autore:",
+			"value": "Alessio Garzia Marotta Brusco"
+			},
+			{
+			"name": "Versione:",
+			"value": "1.1"
+			},
+			{
+			"type": "date",
+			"name": "Data di uscita:",
+			"value": "2023-05-23T12:00:00+00:00"
+			},
+			{
+			"name": "Languages:",
+			"value": "English"
+			}
+		],
+		"previewImageURLs" : ["https://istitutosacrocuore.github.io/FeelIt/feelit1.png","https://istitutosacrocuore.github.io/FeelIt/feelit2.png","https://istitutosacrocuore.github.io/FeelIt/feelit3.png","https://istitutosacrocuore.github.io/FeelIt/feelit4.png"]
 	}
 ]
 }
