@@ -74,6 +74,40 @@
 		"previewImageURLs" : ["https://istitutosacrocuore.github.io/SocialMediaPM/smpm_1.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_2.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_3.jpg","https://istitutosacrocuore.github.io/SocialMediaPM/smpm_4.jpg"]
 	},
 		{
+		"title" : "La tua app fotografica",
+		"overviewSubtitle" : "...mattone su mattone",
+		"detailSubtitle": "Progetta, personalizza e crea l'app 📷 tuoi sogni",
+        "description": "In questo Playground Book avvincente imparerai a personalizzare un’app fotografica, usando e connettendo componenti come una fotocamera, una vista immagine e una vista album fotografico, in modo da poter scattare foto e visualizzarne l’anteprima. \n\nImparerai anche a gestire un editor fotografico per: \n * decorare le foto con adesivi, etichette e bordi \n * usare le foto per creare meme personalizzati e divertenti  \n * salvare le foto decorate nell’app Foto su iPad o a condividerle con amici e familiari.\n\nDivertiti anche tu! Puoi trarre ispirazione dal nostro Playground Book, per creare qualcosa di straordinario: l’app fotografica dei suoi sogni!",
+		"difficultyLevel": "intermediate",
+		"contentIdentifier": "io.github.istitutosacrocuore.cameracreate",
+		"contentVersion": "1.1",
+		"url": "https://istitutosacrocuore.github.io/cameraCreate/cameracreate.zip",
+		"publishedDate": "2022-11-12T09:00:00+07:00",
+		"lastUpdatedDate" : "2022-11-12T12:00:00+07:00",
+		"thumbnailURL": "https://istitutosacrocuore.github.io/cameraCreate/cover.png",
+		"bannerImageURL" : "https://istitutosacrocuore.github.io/cameraCreate/cover.png",
+		"additionalInformation" : [
+			{
+			"name": "Editore:",
+			"value": "Domenico Caggiano"
+			},
+			{
+			"name": "Versione:",
+			"value": "1.1"
+			},
+			{
+			"type": "date",
+			"name": "Data di uscita:",
+			"value": "2022-11-12T12:00:00+00:00"
+			},
+			{
+			"name": "Languages:",
+			"value": "Italiano"
+			}
+		],
+        "previewImageURLs" : ["https://istitutosacrocuore.github.io/cameraCreate/screen1.png","https://istitutosacrocuore.github.io/cameraCreate/screen2.png","https://istitutosacrocuore.github.io/cameraCreate/screen3.png","https://istitutosacrocuore.github.io/cameraCreate/screen4.jpg"]
+	},
+		{
 		"title" : "Feel It",
 		"overviewSubtitle" : "A new way to feel color",
 		"detailSubtitle": "WWDC23 Swift Student Challenge Winner!",
